@@ -1,0 +1,249 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #3a004f;
+}
+
+.section-sub {
+  color: #6d6d6d;
+  margin-bottom: 40px;
+}
+
+/* HERO */
+
+
+/* Layout */
+.res-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Left text */
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin: 18px 0 30px;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 450px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #670267;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(102, 0, 102, 0.25);
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(102, 0, 102, 0.35);
+}
+
+/* Image styling */
+.hero-img {
+  position: relative;
+}
+
+.img-glass {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(18px);
+  padding: 12px;
+  border-radius: 24px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.hero-img img {
+  width: 360px;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Animations */
+.fadeIn {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .res-hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+
+/* GRID */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 12px;
+  color: #5e0259;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* VIDEOS */
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+}
+
+/* APPS */
+.apps-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.app-tile {
+  background: #f7eaff;
+  padding: 14px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #3a004f;
+  font-weight: 600;
+}
+
+/* BOOKS */
+.book-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.book-card {
+  min-width: 180px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.book-card p {
+  padding: 12px;
+  font-weight: 600;
+  color: #3a004f;
+}
+
+/* FAQ */
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-item button {
+  width: 100%;
+  background: #f5e9ff;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.answer {
+  display: none;
+  padding: 14px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 6px;
+  color: #555;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .res-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img img {
+    width: 100%;
+    max-width: 330px;
+  }
+  .grid-4, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

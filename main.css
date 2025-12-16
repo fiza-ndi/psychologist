@@ -1,0 +1,245 @@
+/* ===== PREMIUM HEADER ===== */
+
+.premium-header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #2b3350;
+}
+
+/* NAV MENU */
+.premium-nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.premium-nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    color:  #4d0849;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.premium-nav a:hover {
+    color: #99068d;
+}
+
+/* BUTTON */
+.header-btn {
+    padding: 10px 22px;
+    background: linear-gradient(#5f1353 ,#922a78 );
+    color: white !important;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 0 4px 14px rgba(122, 140, 217, 0.3);
+}
+
+.header-btn:hover {
+    transform: translateY(-3px);
+    background:  #ff9100;
+    box-shadow: 0 6px 20px rgba(122, 140, 217, 0.45);
+}
+
+/* MOBILE HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 1.9rem;
+    cursor: pointer;
+    color:  #5e02599c;
+}
+
+/* MOBILE MENU */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: #ffffff;
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: 0.4s;
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #5e02599c;
+}
+
+.mobile-btn {
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .premium-nav { display: none; }
+    .header-btn { display: none; }
+    .hamburger { display: block; }
+}
+
+
+/* ===== PREMIUM FOOTER ===== */
+
+.premium-footer {
+    background: linear-gradient(135deg, #350f30, #502b4e);
+    padding: 60px 6%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    color: #ffffff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.premium-footer h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.premium-footer p {
+    font-size: 0.95rem;
+    color: #d6dcfa;
+    line-height: 1.6;
+}
+
+/* LINKS */
+.premium-footer a {
+    display: block;
+    color: #dfe3ff;
+    margin: 8px 0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.premium-footer a span {
+    margin-right: 6px;
+    color: #ffa600;
+}
+
+.premium-footer a:hover {
+    color: #ffa600;
+    transform: translateX(5px);
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: #ffa600;
+    transform: translateY(-4px);
+}
+
+
+/* BOTTOM STRIP */
+.footer-bottom {
+    background: #2b3350;
+    padding: 14px;
+    text-align: center;
+    color: #b9c3ff;
+    font-size: 0.9rem;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .premium-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+/* REMOVE OVERFLOW FROM BODY */
+body {
+    overflow-x: hidden;
+}
+
+/* FIX MOBILE MENU OVERFLOW */
+.mobile-nav {
+    right: -100%;
+    max-width: 70%;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .premium-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+.book-btn {
+  background:  #ffa600;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #5947c5;
+}

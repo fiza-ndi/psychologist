@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session | Dr. Muhammad Nadeem</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #ece9ff;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Container */
+        .booking-wrapper {
+            max-width: 1100px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 22px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Left Side */
+        .left-side {
+            flex: 1;
+            background: linear-gradient(#5f1353 ,#922a78 );
+            padding: 50px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left-side h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .left-side p {
+            font-size: 17px;
+            line-height: 26px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .left-side img {
+            width: 100%;
+            border-radius: 18px;
+            margin-top: 20px;
+            opacity: 0.95;
+        }
+
+        /* Right Side Form */
+        .right-side {
+            flex: 1.2;
+            padding: 45px;
+        }
+
+        .right-side h3 {
+            color: #5f1353;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            font-size: 15px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 18px;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #440339;
+            box-shadow: 0 0 8px rgba(106, 90, 205, 0.3);
+            outline: none;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(#5f1353 ,#922a78 );
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #5c1263;
+        }
+
+        /* Success Modal */
+        .modal-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-box {
+            background: #fff;
+            padding: 40px;
+            width: 350px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.2);
+        }
+
+        .modal-box h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .modal-box p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            padding: 10px 20px;
+            background: linear-gradient(#5f1353 ,#922a78 );
+            color: #fff;
+            border: none;
+            font-size: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media(max-width: 900px) {
+            .booking-wrapper {
+                flex-direction: column;
+            }
+            .left-side, .right-side {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<a href="index.html" class="back-btn"> Back to Home</a>
+
+<style>
+.back-btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background:linear-gradient(#5f1353 ,#922a78 );
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.back-btn:hover {
+    background: #5f1353;
+}
+</style>
+
+
+<body>
+
+    <div class="booking-wrapper">
+
+        <!-- LEFT SIDE -->
+        <div class="left-side">
+            <h2>Start Your Healing Journey</h2>
+            <p>Book a personalized therapy session designed to help you find balance, peace, and emotional clarity.</p>
+            <img src="img/e28343a0f46edad216a259cc0704272c.jpg">
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
+        <div class="right-side">
+            <h3>Book Your Session</h3>
+
+            <form id="bookingForm">
+
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+
+                <label>Email Address</label>
+                <input type="email" id="email" required>
+
+                <label>Phone Number</label>
+                <input type="text" id="phone" required>
+
+                <label>Select Service</label>
+                <select id="service" required>
+                    <option value="">Choose a service...</option>
+                    <option>Depression Counseling</option>
+                    <option>Anxiety Management</option>
+                    <option>Relationship Therapy</option>
+                    <option>Child Behavior Therapy</option>
+                    <option>Stress & Trauma Therapy</option>
+                </select>
+
+                <label>Preferred Date</label>
+                <input type="date" id="date" required>
+
+                <label>Your Message (Optional)</label>
+                <textarea id="message" placeholder="Write anything you'd like to share..."></textarea>
+
+                <button class="submit-btn" type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal-bg" id="modal">
+        <div class="modal-box">
+            <h4>✔ Appointment Sent</h4>
+            <p>Thank you! We will contact you soon to confirm your session.</p>
+            <button class="close-btn" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+
+    <script>
+        const form = document.getElementById("bookingForm");
+        const modal = document.getElementById("modal");
+
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            modal.style.display = "flex";
+            form.reset();
+        });
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
