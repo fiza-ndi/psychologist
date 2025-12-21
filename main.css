@@ -1,4 +1,7 @@
 /* ===== PREMIUM HEADER ===== */
+* {
+  font-family: 'Poppins', sans-serif;
+}
 
 .premium-header {
     position: sticky;
@@ -104,6 +107,20 @@
     .hamburger { display: block; }
 }
 
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: #ffffff;
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: 0.4s;
+    z-index: 9999; /* 👈 ADD THIS */
+}
 
 /* ===== PREMIUM FOOTER ===== */
 

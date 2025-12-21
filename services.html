@@ -6,6 +6,8 @@
     <title>Psychologist Website</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -207,10 +209,14 @@
     </div>
   </section>
 
+
+
   <!-- CTA BOTTOM -->
   <section class="cta-bottom container">
     <h3>Ready to improve your emotional well-being?</h3>
     <p>Start your healing journey today — book your session now.</p>
+    <br>
+
     <a class="btn-cta" href="booking.html">Book Appointment</a>
   </section>
 
@@ -266,6 +272,16 @@
     card.addEventListener('keyup', (e)=> { if(e.key==='Enter') card.click(); });
   });
 </script>
+<script>
+  const links = document.querySelectorAll(".mobile-nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+    });
+  });
+</script>
+
 
 </body>
 </html>

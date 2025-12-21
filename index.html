@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -29,6 +31,7 @@
     <a href="booking.html" class="header-btn">Book Session</a>
 
     <div class="hamburger" id="hamBtn">☰</div>
+
 </header>
 
 
@@ -57,7 +60,7 @@
 
     <div class="flex gap-4">
       <a href="booking.html"
-        class="px-6 py-3 bg-primary text-white rounded-xl shadow-md hover:bg-primaryDark transition">
+        class="px-6 py-3 bg-primary text-white rounded-xl shadow-md hover:bg-#922a78">
         Book Appointment
       </a>
 
@@ -85,7 +88,7 @@
     </div>
 
     <div class="mt-4 p-5 bg-white/60 backdrop-blur-glass shadow-lux2 rounded-xl text-center">
-      <h3 class="font-bold text-gray-800">Dr. Muhammad Naveed</h3>
+      <h3 class="font-bold text-gray-800">Dr. Muhammad Nadeem</h3>
       <p class="text-sm text-gray-500">MSc Clinical Psychology & Motivational Speaker</p>
     </div>
   </aside>
@@ -125,7 +128,7 @@
       </p>
 
       <p class="desc">
-        Dr. Muhammad Naveed is a trained Clinical Psychologist helping individuals, couples, 
+        Dr. Muhammad Nadeem is a trained Clinical Psychologist helping individuals, couples, 
         and adolescents improve emotional health and life balance through compassionate and 
         research-based therapy.
       </p>
@@ -319,13 +322,14 @@
 
 
 <script>
-    const ham = document.getElementById("hamBtn");
-    const mobileNav = document.getElementById("mobileNav");
+  const hamBtn = document.getElementById("hamBtn");
+  const mobileNav = document.getElementById("mobileNav");
 
-    ham.onclick = () => {
-        mobileNav.classList.toggle("open");
-    };
+  hamBtn.addEventListener("click", () => {
+    mobileNav.classList.toggle("open");
+  });
 </script>
+
 <script>
 
      tailwind.config = {
@@ -347,6 +351,16 @@
   }
 
 </script>
+<script>
+  const links = document.querySelectorAll(".mobile-nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+    });
+  });
+</script>
+
 </body>
 
 </html>
